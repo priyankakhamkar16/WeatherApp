@@ -10,7 +10,7 @@ const Weather = () => {
 
   const fetchWeather = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/weather/${city}`);
+      const response = await axios.get(`https://weather-app-delta-azure-37.vercel.app/api/weather/${city}`);
       setWeatherData(response.data);
       console.log('Weather Data:', response.data); // Debug log
       setIsAnimated(true);
