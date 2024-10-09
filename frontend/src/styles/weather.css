@@ -1,0 +1,166 @@
+/* Full-screen gradient background representing weather */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to top, #48c3f4, #62e2ff, #c5f2fc, #ffffff); /* Smooth gradient */
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Weather container for centering the content */
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Centers text content */
+  width: 100%; /* Takes full width of the screen */
+  min-height: 100vh; /* Takes full height of the screen */
+}
+
+/* App title styling */
+.app-title {
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for emphasis */
+}
+
+/* Input container styling */
+.input-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/* City input styling */
+.city-input {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 12px;
+  font-size: 1.2rem;
+  outline: none;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Get weather button styling */
+.get-weather-button {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.get-weather-button:hover {
+  background-color: #1b5a83;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add depth on hover */
+}
+
+/* Error message styling */
+.error-message {
+  color: #e74c3c;
+  margin-top: 15px;
+}
+
+/* Placeholder text styling */
+.placeholder-text {
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-align: center; /* Center the text */
+}
+
+/* Today's Weather section */
+.today-weather {
+  background-image: url('../assets/images/background7.webp'); /* Retaining background image */
+  background-size: cover;
+  background-position: center;
+  padding: 40px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Strong shadow for depth */
+  text-align: center;
+  width: 100%; /* Takes full width */
+  max-width: 500px; /* Restrict maximum width to ensure proper centering */
+  margin: 20px auto; /* Centers horizontally */
+}
+
+.location {
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.temperature {
+  font-size: 5rem;
+  margin: 20px 0;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.condition {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* Next Few Days Forecast */
+.forecast-title {
+  font-size: 2.2rem;
+  margin: 20px 0;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.forecast-list-horizontal {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.forecast-item-horizontal {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  flex: 1;
+  transition: transform 0.3s, background-color 0.3s;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 150px;
+}
+
+.forecast-item-horizontal:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.forecast-item-horizontal strong {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.forecast-item-horizontal .temp {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
